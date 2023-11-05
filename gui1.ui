@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1002</width>
+    <height>757</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QWidget" name="mplwindow" native="true">
+        <widget class="QLabel" name="processLabel">
+         <property name="geometry">
+          <rect>
+           <x>200</x>
+           <y>20</y>
+           <width>421</width>
+           <height>50</height>
+          </rect>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="autoFillBackground">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QWidget" name="plotWidget" native="true">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>70</y>
+           <width>600</width>
+           <height>550</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>500</width>
+           <height>550</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>600</width>
+           <height>500</height>
+          </size>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="imageDisplay">
+            <property name="maximumSize">
+             <size>
+              <width>350</width>
+              <height>400</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>300</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="title">
+         <string>Parameters</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QComboBox" name="operationComboBox">
+           <item>
+            <property name="text">
+             <string>--Operation--</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Audio Processing</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Image Processing</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="audioBrowseButton">
+           <property name="text">
+            <string>Upload Audio</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="imageBrowseButton">
+           <property name="text">
+            <string>Upload Image</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="audioAnalysisComboBox">
+           <item>
+            <property name="text">
+             <string>--Analysis--</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Waveform</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Time Domain - FFT</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Freq - Magnitude</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Freq - Phase</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="grayScaleButton">
+           <property name="text">
+            <string>GrayScale</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="imageProcessingComboBox">
+           <item>
+            <property name="text">
+             <string>--Image Processing--</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Basic</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Intermediate</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Advanced</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="basicGroupBox">
+           <property name="title">
+            <string>Basic Operations</string>
+           </property>
+           <layout class="QFormLayout" name="formLayout">
+            <item row="0" column="1">
+             <widget class="QSlider" name="brightnessHorizontalSlider">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="brightnessLabel">
+              <property name="text">
+               <string>brightness</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="filteringLabel">
+              <property name="text">
+               <string>Filtering</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSlider" name="filteringHorizontalSlider">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSlider" name="inversionHorizontalSlider">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="inversionLabel">
+              <property name="text">
+               <string>Inversion</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="interGroupBox">
+           <property name="title">
+            <string>Intermediate Operations</string>
+           </property>
+           <layout class="QFormLayout" name="formLayout_2">
+            <item row="0" column="0">
+             <widget class="QLabel" name="equalizationLabel">
+              <property name="text">
+               <string>Equalization</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QSlider" name="equalizationHorizontalSlider">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="noiseReductionLabel">
+              <property name="text">
+               <string>N.Reduction</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSlider" name="noiseReductionhorizontalSlider">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="enhancementLabel">
+              <property name="text">
+               <string>Enhancement</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSlider" name="enhancementHorizontalSlider">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="advancedGroupBox">
+           <property name="title">
+            <string>Advanced Operations</string>
+           </property>
+           <layout class="QFormLayout" name="formLayout_3">
+            <item row="0" column="0">
+             <widget class="QLabel" name="thresholdingLabel">
+              <property name="text">
+               <string>Thresholding</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QSlider" name="thresholdingHorizontalSlider">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="segmentationLabel">
+              <property name="text">
+               <string>Segmentation</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSlider" name="segmentationHorizontalSlider">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="featureDetectionLabel">
+              <property name="text">
+               <string>Detection</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSlider" name="horizontalSlider_7">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="imagePlotButton">
+           <property name="text">
+            <string>Plot</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1002</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMyDawApp">
+    <property name="title">
+     <string>MyDawApp</string>
+    </property>
+   </widget>
+   <addaction name="menuMyDawApp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
